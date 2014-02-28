@@ -1875,7 +1875,7 @@ a.button-red:hover {
 
 .pagination-previous.alignleft,
 .pagination-previous.alignright {
-	margin-bottom: 10px;
+	margin-bottom: 20px;
 }
 
 /* After Post Block - Before Post Block
@@ -2144,13 +2144,6 @@ Site Footer
 /*
 Genesis Widgetized Not Found & 404
 ---------------------------------------------------------------------------------------------------- */
-
-.error404 .content .widget-area,
-.search-no-results .content .widget-area {
-	/*border-bottom: 1px solid #ddd;*/
-	/*margin-bottom: 40px;*/
-	/*padding: 40px 0 24px;*/
-}
 
 .error404 .content .widget-area,
 .search-no-results .content .widget-area {
