@@ -29,6 +29,10 @@ function marcus_home_genesis_meta() {
 	}
 }
 
+/**
+ * Add custom body class to front page
+ *
+ */
 function marcus_body_class( $classes ) {
 
 	$classes[] = 'marcus-frontpage';
