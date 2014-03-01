@@ -25,7 +25,7 @@ add_action( 'wp_enqueue_scripts', 'marcus_enqueue_scripts' );
  */
 function marcus_enqueue_scripts() {
 
-	wp_enqueue_script( 'marcus-responsive-menu', get_stylesheet_directory_uri() . '/js/responsive-menu.js', array( 'jquery' ), '1.0.0', true ); // Change 'prefix' to your theme's prefix
+	wp_enqueue_script( 'marcus-responsive-menu', get_stylesheet_directory_uri() . '/js/responsive-menu.js', array( 'jquery' ), '1.0.0', true );
 	wp_enqueue_style( 'google-font', '//fonts.googleapis.com/css?family=Oswald:400,700|Open+Sans:400,700', array(), CHILD_THEME_VERSION );
 	wp_enqueue_style( 'marcus-dashicons-style', get_stylesheet_directory_uri(), array('dashicons'), '1.0' );
 
@@ -44,14 +44,6 @@ add_theme_support( 'genesis-footer-widgets', 3 );
 //* Reposition the primary navigation
 remove_action( 'genesis_after_header', 'genesis_do_nav' );
 add_action( 'genesis_before_header', 'genesis_do_nav' );
-
-//* Add custom body class to home page
-//add_filter( 'body_class', 'marcus_hp_add_body_class' );
-//function marcus_hp_add_body_class( $classes ) {
-	//if ( is_front_page())
-	//$classes[] = 'marcus';
-	//return $classes;
-//}
 
 //* Add before post block section to single post page
 add_action( 'genesis_before_entry', 'marcus_before_post_block'  ); 
