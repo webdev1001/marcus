@@ -16,7 +16,7 @@ add_theme_support( 'html5' );
 //* Add viewport meta tag for mobile browsers
 add_theme_support( 'genesis-responsive-viewport' );
 
-//* Enqueue marcus scripts
+//* Enqueue Marcus scripts
 add_action( 'wp_enqueue_scripts', 'marcus_enqueue_scripts' );
 /**
  * Enqueue responsive javascript
@@ -129,9 +129,14 @@ genesis_register_sidebar( array(
 	'description'	=> __( 'This is the Home Bottom 3 section of the homepage.', 'marcus' ),
 ) );
 genesis_register_sidebar( array(
-	'id'		=> 'home-bottom-message',
-	'name'		=> __( 'Home Bottom Message', 'marcus' ),
-	'description'	=> __( 'This is the Home Bottom Message section of the homepage.', 'marcus' ),
+	'id'		=> 'pre-footer-1',
+	'name'		=> __( 'Pre Footer 1', 'marcus' ),
+	'description'	=> __( 'This is the Pre Footer 1 section of the homepage.', 'marcus' ),
+) );
+genesis_register_sidebar( array(
+	'id'		=> 'pre-footer-2',
+	'name'		=> __( 'Pre Footer 2', 'marcus' ),
+	'description'	=> __( 'This is the Pre Footer 2 section of the homepage.', 'marcus' ),
 ) );
 genesis_register_sidebar( array(
 	'id'		=> 'before-post-block',

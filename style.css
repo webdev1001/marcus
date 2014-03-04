@@ -1284,6 +1284,16 @@ html > body.marcus-frontpage .slide-excerpt-border {
 	background: url(images/bg_control_nav.png) no-repeat 0 0;
 }
 
+.marcus-frontpage .enews-widget,
+.marcus-frontpage .enews-widget .widget-title {
+	color: #333;
+}
+
+.marcus-frontpage .enews-widget input:hover[type="submit"] {
+	background-color: #333;
+	color: #fff;
+}
+
 .marcus-frontpage .entry {
 	background-color: transparent;
 	border-bottom: 0;
@@ -1291,7 +1301,7 @@ html > body.marcus-frontpage .slide-excerpt-border {
 
 .marcus-frontpage .featured-content .entry {
 	margin-bottom: 0;
-	padding: 0;
+	padding: 0 0 24px;
 }
 
 .home-top-message {
@@ -1473,18 +1483,96 @@ html > body.marcus-frontpage .slide-excerpt-border {
 	padding: 15px;
 }
 
-.home-bottom-message {
+.pre-footer {
 	clear: both;
 	margin-bottom: 40px;
 	padding: 20px 0 0;
 }
 
-.home-bottom-message .widget {
+.pre-footer .wrap {
+	clear: both;
+	margin: 0 auto;
+	width: 1160px;
+}
+
+.pre-footer ol,
+.pre-footer ul,
+.pre-footer p {
+	margin-bottom: 26px;
+}
+
+.pre-footer-1 ol,
+.pre-footer-1 ul {
+	margin-left: 40px;
+}
+
+.pre-footer-1 ol li {
+	list-style-type: decimal;
+}
+
+.pre-footer-1 ul li {
+	list-style-type: circle;
+}
+
+.pre-footer-2 li {
+	list-style-type: none;
+	margin-bottom: 6px;
+	word-wrap: break-word;
+}
+
+.pre-footer-1 {
+	float: left;
+	margin-right: 5.555555555%;
+	width: 64.655172413%;
+}
+
+.pre-footer-2 {
+	float: right;
+	width: 29.629629629%;
+}
+
+.pre-footer-1 .widget,
+.pre-footer-2 .widget {
 	background-color: #fff;
 	border-radius: 3px;
 	box-shadow: 0px 2px 3px #ccc;
+	margin-bottom: 40px;
 	padding: 40px;
 }
+
+.pre-footer-1 .entry {
+	background-color: transparent;
+	border-bottom: 0;
+	box-shadow: none;
+}
+
+.pre-footer-1 .entry-title {
+	font-size: 16px;
+	margin-bottom: 24px;
+	text-transform: uppercase;
+}
+
+.pre-footer-1 .featured-content .entry {
+	border-bottom: none;
+	margin-bottom: 24px;
+}
+
+.pre-footer-1 .featuredpost img {
+	border: none;
+	margin: 0 0 10px;
+	padding: 0;
+}
+
+.pre-footer-1 .featuredpost .alignleft img {
+	margin-bottom: 0;
+	margin-right: 20px;
+}
+
+.pre-footer-1 .featuredpost .alignright img {
+	margin-bottom: 0;
+	margin-left: 20px;
+}
+
 
 /* Entries
 --------------------------------------------- */
@@ -2375,6 +2463,7 @@ Media Queries
 	.home-bottom .wrap,
 	.home-action .wrap,
 	.home-top-message .wrap,
+	.pre-footer .wrap,
 	.slider .wrap {
 		width: 90%;
 	}
@@ -2393,6 +2482,16 @@ Media Queries
 	.home-bottom-3	{
 		margin: 0 auto;
 		text-align: center;
+		width: 100%;
+	}
+
+	.pre-footer .widget {
+		padding: 0;
+	}
+
+	.pre-footer-1,
+	.pre-footer-2 {
+		margin: 0 auto;
 		width: 100%;
 	}
 
@@ -2492,6 +2591,7 @@ Media Queries
 	.home-bottom-3 .widget,
 	.home-bottom-message .widget,
 	.marcus-widget-page .content .widget,
+	.pre-footer .widget,
 	.search-no-results .content .widget-area,
 	.sidebar .widget {
 		box-shadow: none;
