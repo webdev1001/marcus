@@ -8,7 +8,7 @@ load_child_theme_textdomain( 'marcus', apply_filters( 'child_theme_textdomain', 
 //* Child theme (do not remove)
 define( 'CHILD_THEME_NAME', __( 'Marcus Theme', 'marcus' ) );
 define( 'CHILD_THEME_URL', 'http://wpcanada.ca/our-themes/marcus' );
-define( 'CHILD_THEME_VERSION', '1.0.1' );
+define( 'CHILD_THEME_VERSION', '1.0.2' );
 
 //* Add HTML5 markup structure
 add_theme_support( 'html5' );
