@@ -8,7 +8,7 @@ load_child_theme_textdomain( 'marcus', apply_filters( 'child_theme_textdomain', 
 //* Child theme (do not remove)
 define( 'CHILD_THEME_NAME', __( 'Marcus Theme', 'marcus' ) );
 define( 'CHILD_THEME_URL', 'http://wpcanada.ca/our-themes/marcus' );
-define( 'CHILD_THEME_VERSION', '1.0.2' );
+define( 'CHILD_THEME_VERSION', '1.1.0' );
 
 //* Add HTML5 markup structure
 add_theme_support( 'html5' );
@@ -97,6 +97,17 @@ if ( !is_page() ) {
 	return $post_info;
 }}
 
+//* Unhook Genesis footer and add custom widget area
+remove_action( 'genesis_footer', 'genesis_do_footer' );
+add_action( 'genesis_footer', 'marcus_footer' );
+function marcus_footer() {
+                genesis_widget_area( 'marcus_footer', array(
+		'before' => '<div class="marcus_footer widget-area">',
+		'after'  => '</div>',
+    ) );
+
+}
+
 //* Register widget areas
 genesis_register_sidebar( array(
 	'id'		=> 'slider',
@@ -152,4 +163,9 @@ genesis_register_sidebar( array(
 	'id'		=> 'widget-page',
 	'name'		=> __( 'Widget Page', 'marcus' ),
 	'description'	=> __( 'This is the Widget Page template.', 'marcus' ),
+) );
+genesis_register_sidebar( array(
+	'id'		=> 'marcus_footer',
+	'name'		=> __( 'Marcus Footer', 'marcus' ),
+	'description'	=> __( 'This is the custom footer area.', 'marcus' ),
 ) );

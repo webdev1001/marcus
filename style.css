@@ -5,7 +5,7 @@
 	Author: WPCanada
 	Author URI: http://wpcanada.ca/
 
-	Version: 1.0.2
+	Version: 1.1.0
  
 	Tags: black, blue, white, one-column, two-columns, three-columns, fixed-width, custom-menu, full-width-template, sticky-post, theme-options, threaded-comments, translation-ready
  
@@ -777,6 +777,10 @@ img.alignright,
 
 .sidebar .widget-title a {
 	border: none;
+}
+
+.site-footer .widget-title {
+	color: #fff;
 }
 
 .archive-title {
@@ -2251,7 +2255,7 @@ Site Footer
 }
 
 .site-footer p {
-	margin-bottom: 0;
+	margin-bottom: 16px;
 }
 
 .site-footer,
@@ -2266,6 +2270,10 @@ Site Footer
 
 .site-footer a:hover {
 	color: #fff;
+}
+
+.marcus_footer {
+	padding: 0 20px;
 }
 
 /*
