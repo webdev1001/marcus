@@ -21,7 +21,7 @@ The frontpage features 9 custom widget areas:
 	6. Pre Footer 2. You can use various widgets here such as the Genesis eNews plugin, Simple Social Icons plugin, Recent Posts widget, Search widget etc.
 	7. Marcus Footer. This new widget area replaces the default footer.
 
-Additionally, Marcus comes with 2 other widget areas, Before Post Block and After Post Block. They appear before/after posts on single post pages.
+Additionally, Marcus comes with 2 other widget areas, Before Entry and After Entry. They appear before/after posts on single post pages.
 
 WIDGET PAGE TEMPLATE
 	Marcus comes with a widget Page Template. To use it, publish an empty page using the Widget Page Template from the drop down menu then start adding widgets
@@ -82,6 +82,29 @@ Marcus Footer
 Additionally, the Archive Page and 404 Error Page of the demo site makes use of 2 plugins which allows you to add content to those pages via widgets.
 Those plugins are listed further down this page under the section Recommended Plugins.
 
+PRIMARY NAVIGATION EXTRAS
+	As of Genesis 2.1, the Primary Navigation Extras options have been removed for new installs. (upgrades of current installs to 2.1 will not lose the Primary Navigation Extras settings)
+	The prefered method of adding custom links like Twitter or RSS is to use a custom menu item and give it a CSS class of right.
+
+	In this version of Marcus, Dashicons have been dropped for Twitter & RSS links in favour of Genericons icon fonts. The list of supported icon fonts are:
+
+	- dribble
+	- email
+	- facebook
+	- flickr
+	- github
+	- googleplus
+	- instagram
+	- linkedin
+	- pinterest
+	- tumblr
+	- twitter
+	- vimeo
+	- wordpress
+	- youtube
+
+	For example, to add a Twitter link, add a custom link to your menu and in the CSS Classes input field enter right twitter. Refer to the theme docs for details.
+
 CONTENT BOXES
 	The custom content boxes make use of DIV classes. For example ...
 
@@ -117,8 +140,9 @@ CREDIT
 
 FURTHER
 	1. Theme Release Page - http://wpcanada.ca/our-themes/marcus/
-	2. Theme Demo - http://demo.wpcanada.ca/marcus/
-	3. Download from GitHub - https://github.com/lenkutchma/marcus
+	2. Theme Documentation - http://docs.wpcanada.ca/docs/marcus/
+	3. Theme Demo - http://demo.wpcanada.ca/marcus/
+	4. Download from GitHub - https://github.com/lenkutchma/marcus
 
 BUG REPORTS
 	https://github.com/lenkutchma/marcus/issues

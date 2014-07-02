@@ -8,7 +8,7 @@ load_child_theme_textdomain( 'marcus', apply_filters( 'child_theme_textdomain', 
 //* Child theme (do not remove)
 define( 'CHILD_THEME_NAME', __( 'Marcus Theme', 'marcus' ) );
 define( 'CHILD_THEME_URL', 'http://wpcanada.ca/our-themes/marcus' );
-define( 'CHILD_THEME_VERSION', '1.1.1' );
+define( 'CHILD_THEME_VERSION', '1.2.0' );
 
 //* Add HTML5 markup structure
 add_theme_support( 'html5' );
@@ -16,19 +16,19 @@ add_theme_support( 'html5' );
 //* Add viewport meta tag for mobile browsers
 add_theme_support( 'genesis-responsive-viewport' );
 
-//* Enqueue Marcus scripts
+//* Enqueue Javascript files
 add_action( 'wp_enqueue_scripts', 'marcus_enqueue_scripts' );
-/**
- * Enqueue responsive javascript
- * @author Ozzy Rodriguez
- * @todo Change 'prefix' to your theme's prefix
- */
 function marcus_enqueue_scripts() {
 
 	wp_enqueue_script( 'marcus-responsive-menu', get_stylesheet_directory_uri() . '/js/responsive-menu.js', array( 'jquery' ), '1.0.0', true );
+}
+
+//* Enqueue CSS files
+add_action( 'wp_enqueue_scripts', 'malcolm_enqueue_styles' );
+function malcolm_enqueue_styles() {
+
 	wp_enqueue_style( 'google-font', '//fonts.googleapis.com/css?family=Oswald:400,700|Open+Sans:400,700', array(), CHILD_THEME_VERSION );
 	wp_enqueue_style( 'marcus-dashicons-style', get_stylesheet_uri(), array('dashicons'), '1.0' );
-
 }
 
 //* Add new image sizes
@@ -45,33 +45,22 @@ add_theme_support( 'genesis-footer-widgets', 3 );
 remove_action( 'genesis_after_header', 'genesis_do_nav' );
 add_action( 'genesis_before_header', 'genesis_do_nav' );
 
-//* Add before post block section to single post page
-add_action( 'genesis_before_entry', 'marcus_before_post_block'  ); 
-function marcus_before_post_block() {
+//* Add before entry widget area to single post page
+add_action( 'genesis_before_entry', 'marcus_before_entry'  ); 
+function marcus_before_entry() {
 
     if ( ! is_singular( 'post' ) )
     	return;
 
-    genesis_widget_area( 'before-post-block', array(
-		'before' => '<div class="before-post-block widget-area"><div class="wrap">',
+    genesis_widget_area( 'before-entry', array(
+		'before' => '<div class="before-entry widget-area"><div class="wrap">',
 		'after'  => '</div></div>',
     ) );
 
 }
 
-//* Add after post block section to single post page
-add_action( 'genesis_entry_footer', 'marcus_after_post_block'  ); 
-function marcus_after_post_block() {
-
-    if ( ! is_singular( 'post' ) )
-    	return;
-
-    genesis_widget_area( 'after-post-block', array(
-		'before' => '<div class="after-post-block widget-area"><div class="wrap">',
-		'after'  => '</div></div>',
-    ) );
-
-}
+//* Add support for after entry widget
+add_theme_support( 'genesis-after-entry-widget-area' );
 
 //* Reposition the breadcrumbs
 remove_action( 'genesis_before_loop', 'genesis_do_breadcrumbs' );
@@ -150,14 +139,9 @@ genesis_register_sidebar( array(
 	'description'	=> __( 'This is the Pre Footer 2 section of the homepage.', 'marcus' ),
 ) );
 genesis_register_sidebar( array(
-	'id'		=> 'before-post-block',
-	'name'		=> __( 'Before Post Block', 'marcus' ),
-	'description'	=> __( 'This is the Before Post block section.', 'marcus' ),
-) );
-genesis_register_sidebar( array(
-	'id'		=> 'after-post-block',
-	'name'		=> __( 'After Post Block', 'marcus' ),
-	'description'	=> __( 'This is the After Post block section.', 'marcus' ),
+	'id'		=> 'before-entry',
+	'name'		=> __( 'Before Entry', 'marcus' ),
+	'description'	=> __( 'Widgets in this widget area will display before single entries.', 'marcus' ),
 ) );
 genesis_register_sidebar( array(
 	'id'		=> 'widget-page',
