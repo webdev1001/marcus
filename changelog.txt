@@ -40,3 +40,6 @@
 	* changed title font from Oswald to Dosis
 	* numerous CSS adjustments
 	* reorganized theme folder structure
+
+31 OCT 2014 - version 2.0.1
+	* fixed situation where scrollbar appears when tertiary menu active

@@ -5,7 +5,7 @@
 	Author: WPCanada
 	Author URI: http://wpcanada.ca/
 
-	Version: 2.0.0
+	Version: 2.0.1
  
 	Tags: black, blue, white, one-column, two-columns, three-columns, fixed-width, custom-menu, full-width-template, sticky-post, theme-options, threaded-comments, translation-ready
  
@@ -2878,7 +2878,7 @@ Media Queries
 
 }
 
-@media only screen and (max-width: 1159px) {
+@media only screen and (max-width: 1180px) {
 
 	.breadcrumb,
 	.site-inner,
